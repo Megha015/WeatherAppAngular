@@ -1,0 +1,180 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --blue-1: #3c429e;
+  --blue-2: #4c52ad;
+  --yellow-1: #fac742;
+  --white: #fff;
+  --gre-1: #ededed;
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-light: rgba(255, 255, 255, 0.1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--blue-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 350px;
+  height: 80vh;
+  background-color: var(--blue-2);
+  border-radius: 200px 200px 150px 150px;
+  box-shadow: 10px 10px 10px var(--shadow-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.upperdata {
+  position: relative;
+  flex: 1;
+  background-color: pink;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+}
+.upperdata img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.weather-data {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--shadow-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.location {
+  color: var(--white);
+  text-align: center;
+  font-size: 1.5rem;
+}
+.temperature {
+  color: var(--white);
+  text-align: center;
+  font-size: 4rem;
+}
+.lowerdata {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: blueviolet;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+}
+
+.more-info-label {
+  color: white;
+}
+
+.more-info-container {
+  flex: 1;
+  background-color: var(--shadow-light);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info-block {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.info.block-label {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-block-label span {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.info-block-value {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+.city {
+  padding-bottom: 0.6rem;
+  /* margin-bottom: 0.4rem; */
+  text-align: center;
+}
+
+.city input {
+  width: 80%;
+  box-sizing: border-box;
+  color: white;
+  background-color: black;
+  border: none;
+  padding: 1rem;
+  margin: 0;
+  outline: none;
+  border-radius: 20px;
+}
+
+.city form {
+  display: flex;
+  align-items: center;
+}
+
+.city form .search-button {
+  margin-left: 10px;
+}
+
+/* .city button {
+  margin-left: 1rem;
+} */
+
+.search-button {
+  background-color: var(--blue-1);
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  cursor: pointer; /* Add mouse pointer on hover */
+  padding: 10px; /* Add some padding */
+  margin-left: -45px; /* Adjust the margin to align with the input field */
+  font-size: 20px; /* Increase font size */
+}

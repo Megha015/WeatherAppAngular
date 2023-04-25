@@ -1,0 +1,69 @@
+<div class="city">
+  <form #form="ngForm">
+    <input
+      type="text"
+      placeholder="Enter city name"
+      [(ngModel)]="cityName"
+      [(ngModel)]="initialcity"
+      name="city"
+    />
+
+    <button (click)="onSubmit($event); form.reset()" class="search-button">
+      <i class="fas fa-search"></i>
+    </button>
+  </form>
+</div>
+
+<div class="container">
+  <div class="upperdata">
+    <img src="../assets/pic1.avif" alt="no" *ngIf="14 > 15" />
+    <img src="../assets/nightsky.avif" alt="no" *ngIf="14 <= 15" />
+    <div class="weather-data">
+      <div class="location">{{ myWeather.name }}</div>
+      <div class="temperature">{{ temperature | number : "1.0-0" }}°C</div>
+    </div>
+  </div>
+
+  <div class="lowerdata">
+    <div class="more-info-label">More information</div>
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/cold.png" class="image" alt="no" />
+          <span>min</span>
+        </div>
+        <div class="info-block-value">{{ mintemp | number : "1.0-0" }}°C</div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/hot.webp" class="image" alt="no" />
+          <span>max</span>
+        </div>
+        <div class="info-block-value">{{ maxtemp | number : "1.0-0" }}°C</div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/humidity.avif" class="image" alt="no" />
+          <span>humidity</span>
+        </div>
+        <div class="info-block-value">{{ humidity }}%</div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/wind.jpg" class="image" alt="no" />
+          <span>wind</span>
+        </div>
+        <div class="info-block-value">{{ wind }}km/h</div>
+      </div>
+    </div>
+
+    <!-- <img src="../assets/hot.webp" alt="no" />
+  <img src="../assets/cold.png" alt="no" />
+  <img src="../assets/wind.jpg" alt="no" /> -->
+  </div>
+</div>
+
+<router-outlet></router-outlet>
